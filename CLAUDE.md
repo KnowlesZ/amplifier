@@ -17,6 +17,51 @@ This file is reserved for Claude Code-specific instructions.
 - @ai_context/design/DESIGN-FRAMEWORK.md
 - @ai_context/design/DESIGN-VISION.md
 
+# Repository Setup
+
+## Fork Information
+
+This repository is a **personal fork** of [microsoft/amplifier](https://github.com/microsoft/amplifier), maintained for independent development.
+
+### Remote Configuration
+
+```
+origin   → https://github.com/KnowlesZ/amplifier.git (your fork - where you push)
+upstream → https://github.com/microsoft/amplifier.git (original repo - for pulling updates)
+```
+
+### Relationship with Upstream
+
+- **Primary development** happens in this fork
+- **Upstream remote** is maintained to pull useful updates from microsoft/amplifier
+- **No automatic syncing** - updates are pulled selectively when desired
+- **Independent direction** - this fork can diverge as needed for personal use cases
+
+### Pulling Updates from Upstream
+
+To selectively incorporate updates from the original microsoft/amplifier:
+
+```bash
+# Fetch latest changes from upstream
+git fetch upstream
+
+# Review what changed
+git log HEAD..upstream/main
+
+# Merge specific updates (only if desired)
+git merge upstream/main
+
+# Or cherry-pick specific commits
+git cherry-pick <commit-hash>
+```
+
+### Development Workflow
+
+1. **Make changes** in feature branches or directly on main
+2. **Commit** with proper attribution
+3. **Push to origin** (your fork): `git push origin main`
+4. **No PRs to upstream** - this is your independent project
+
 # Claude's Working Philosophy and Memory System
 
 ## Critical Operating Principles
